@@ -1,0 +1,264 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	padding:0;
+	margin:0;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;	
+}
+
+.navbar-nav .nav-item:last-child .nav-link:hover {
+    color: #ff0000 !important;
+}
+
+.jumbotron {
+	cursor: pointer;
+}
+
+.featured-image {
+	background-size: cover;
+	background-position: center;
+	padding-top: 100px;
+	padding-bottom: 150px;
+	margin-left: -70px;
+	margin-right: -70px;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.featured-image::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+	/*Gradientoverlay*/border-radius: inherit;
+	/*Inheritborderradius*/z-index: 1;
+	/*Ensureoverlayisabovetheimage*/opacity: 0;
+	transition: opacity 0.5s ease;
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+}
+
+.featured-image:hover::after {
+    opacity: 1;
+}
+
+.featured-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    z-index: 2;
+	transition: opacity 0.3s;
+	opacity: 0;
+}
+
+.featured-image:hover .featured-text {
+    opacity: 1; /* Show on hover */
+}
+
+.featured-text h1,
+.featured-text p {
+    margin-bottom: 10px;
+}
+
+.featured-text a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.featured-text a:hover {
+    text-decoration: underline;
+}
+
+.image-container {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-text {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.card-text span {
+    margin-right: 10px;
+}
+
+.bi {
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+/* Style for image preview */
+#imagePreview {
+    max-width: 100%; /* Adjust the maximum width as needed */
+    max-height: 200px; /* Adjust the maximum height as needed */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    margin-top: 10px; /* Add some top margin for spacing */
+}
+
+.select-dropdown {
+	width: 100%;
+	padding: 8px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	cursor: pointer;
+  }
+  
+	.select-dropdown option {
+	padding: 8px;
+  }
+  
+  /* Style for album container */
+	.album-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  /* Style for album info */
+  .album-info {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .album-info img {
+	width: 100px; /* Adjust as needed */
+	height: 100px; /* Adjust as needed */
+	border-radius: 50%;
+	margin-right: 10px;
+  }
+  
+  .album-info h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+
+  .album-info p {
+	font-size: 16px;
+	margin-bottom: 5px;
+  }
+  
+  .photo-count {
+	font-style: italic;
+  }
+
+  .card-link {
+    text-decoration: none;
+}
+
+.card-link:hover .card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: box-shadow 0.3s ease; 
+}
+
+.bi-heart, .bi-chat-dots {
+	cursor: pointer;
+}
+
+.comment-count {
+	text-decoration: none;
+	color: black;
+	cursor: text;
+}
+
+.comments-section {
+	margin-top: 40px;
+}
+
+.image-details {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.image-description {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.album-name {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.upload-date {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.like-button {
+    cursor: pointer;
+    display: inline-block;
+    color: #dc3545;
+}
+
+.like-button:hover {
+    color: #c82333;
+}
+
+.comment-form {
+    margin-top: 20px;
+}
+
+.comment-form textarea {
+    resize: none;
+}
+
+.bi-heart.filled {
+    color: red;
+}
+
+.btn-group {
+	display: flex;
+	justify-content: flex-end;
+}
